@@ -1,0 +1,71 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    width: 100px; /* Ajusta el tamaño del logotipo */
+    margin: 10px; /* Añade espacio desde los bordes de la página */
+}
+
+.logo-top-left {
+    top: 0;
+    left: 0;
+}
+
+.logo-top-right {
+    top: 0;
+    right: 0;
+}
+
+.logo-bottom-right {
+    bottom: 0;
+    right: 0;
+}
+.logo-center {
+    width: 450px;
+    z-index: 1;
+}
+.content {
+    text-align: center;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 0;
+    z-index: 2; /* Asegura que el texto este delante de las imagenes */
+    background-color: white; /* fondo para mejor legibilidad */
+    padding: 10px; /* espaciado opcional */
+}
+.tarjeta{
+    position: absolute;
+    top: 325px;
+    left: 50%;
+    transform: translateX(-50%); 
+    text-align: center;
+    z-index: 1;
+}
+.hora{
+    position: absolute;
+    top: 570px;
+    left: 50%;
+    transform: translateX(-50%); 
+    text-align: center;
+    z-index: 1;
+}
+.Scann{
+    position: absolute;
+    top: 385px;
+    left: 50%;
+    transform: translateX(-50%); 
+    text-align: center;
+    z-index: 1;
+}
