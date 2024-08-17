@@ -30,25 +30,47 @@ if(window.addEventListener){
 
 // Función para buscar al empleado
 function buscarEmpleado(id_empleado) {
-    alert("Buscando al empleado: " + id_empleado);
+    //alert("Buscando al empleado: " + id_empleado);
     return new Promise((resolve, reject) => {
         const url = "http://localhost/checador_js/checador_api/api.php?id_empleado=" + id_empleado;
         fetch(url)
             .then(response => {
                 if (response.ok) {
-                    alert("Empleado encontrado");
+                    //alert("Empleado encontrado");
                     return response.json(); // Retorna la promesa del JSON
                 } else {
-                    alert("Error al buscar al empleado");
+                    //alert("Error al buscar al empleado");
+                    let imgElement = document.getElementById("imgPerfil");
+                    let headerElement = document.getElementById("header");
+                    imgElement.src = "img/imagperfil.png";
+                    headerElement.textContent = "Usuario no encontrado";
+
+                //Regresamos al estado original despues de 3 segundos
+                setTimeout(function(){
+                    imgElement.src = "img/imagperfil.png";
+                    headerElement.textContent = "Escanee su tarjeta";
+                }, 3000);
+                
                     throw new Error("Error al buscar al empleado: " + response.status);
                 }
             })
             .then(data => {
-                alert(JSON.stringify(data));
+                let imgElement = document.getElementById("imgPerfil");
+                let headerElement = document.getElementById("header");
+                //alert(data.data.foto);
+                imgElement.src = data.data.foto;
+                headerElement.textContent = data.data["nombre"].toUpperCase();
+
+                //Regresamos al estado original despues de 3 segundos
+                setTimeout(function(){
+                    imgElement.src = "img/imagperfil.png";
+                    headerElement.textContent = "Escanee su tarjeta";
+                }, 3000);
+
                 resolve(data); // Resuelve la promesa con los datos recibidos
             })
             .catch(error => {
-                alert("Error al buscar al empleado: " + error.message);
+                //alert("Error al buscar al empleado: " + error.message);
                 reject(error); // Rechaza la promesa en caso de error
             });
     });
