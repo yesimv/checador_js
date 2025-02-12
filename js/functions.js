@@ -11,8 +11,10 @@ function horayfecha() {
     if (minuto < 10) minuto = `0${minuto}`;
     if (segundo < 10) segundo = `0${segundo}`; 
     if (dia < 10) dia = `0${dia}`;
-    var horayfecha = `${dia} de ${meses[mes-1]} de ${anio} ${hora}:${minuto}:${segundo}`;
-    document.getElementById("Hora").innerHTML = horayfecha;
+    var fechaactual = `${dia} de ${meses[mes-1]} de ${anio}`;
+    var horaactual = `${hora}:${minuto}:${segundo}`;
+    document.getElementById("Fecha").innerHTML = fechaactual;
+    document.getElementById("Hora").innerHTML = horaactual;
 }
 
 if(window.addEventListener){

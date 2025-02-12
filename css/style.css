@@ -1,6 +1,64 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Thin.ttf');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Medium.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-SemiBold.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-ExtraBold.ttf');
+    font-weight: 800;
+    font-style: normal;
+}
+
 body, html {
-    height: 100%;
+    
     margin: 0;
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+.contenido{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+height: 100vh;
 }
 
 .flex {
@@ -8,64 +66,83 @@ body, html {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 100vh;
     position: relative;
 }
 
-.logo {
-    position: absolute;
-    width: 100px; /* Ajusta el tamaño del logotipo */
-    margin: 10px; /* Añade espacio desde los bordes de la página */
+
+.user-code{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.info{
+    font-size: 30px;
+    margin: 0px;
+    line-height: 0.4
+}
+.log-btn {
+    
+    border-radius: 5px;
+    border: 1px solid #960E53;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    width: 140px;
+    margin: 10px;
+}
+.log-btn p {
+    margin: 0px;
+    color: #960E53;
+}
+.log-icon{
+    width: 27px;
+    height: 27px;
+    padding-right: 8px;
+}
+.logo-sonora{
+    max-width: 448px;
+    max-height: 218px;
 }
 
-.logo-top-left {
-    top: 0;
-    left: 0;
-}
-
-.logo-top-right {
-    top: 0;
-    right: 0;
-}
-
-.logo-bottom-right {
-    bottom: 0;
-    right: 0;
-}
-.logo-center {
-    top: 1000px;
-    z-index: 0;
-}
 .content {
     text-align: center;
     margin-bottom: 20px;
-    position: absolute;
-    top: 0;
     z-index: 2; /* Asegura que el texto este delante de las imagenes */
     background-color: white; /* fondo para mejor legibilidad */
     padding: 10px; /* espaciado opcional */
 }
-.tarjeta{
-    position: absolute;
-    top: 325px;
-    left: 50%;
-    transform: translateX(-50%); 
-    text-align: center;
-    z-index: 1;
-}
+
 .hora{
-    position: absolute;
-    top: 570px;
+    margin-top: 1rem;
     left: 50%;
-    transform: translateX(-50%); 
     text-align: center;
-    z-index: 1;
+    font-family: 'Montserrat';
+    font-size: 106px;
+    font-weight: 800;
+    color: #960E53;
+    line-height: 1;
+}
+.fecha{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 0.7;
+}
+.user-icon{
+    width: 150px;
+    height: 150px;
 }
 .Scann{
-    position: absolute;
-    top: 385px;
-    left: 50%;
-    transform: translateX(-50%); 
+    
     text-align: center;
     z-index: 1;
+}
+.escaner{
+    width: 180px;
+    height: 180px;
+}
+.footer{
+    width: 100%;
+    height: auto;
 }

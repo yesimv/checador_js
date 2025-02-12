@@ -8,25 +8,33 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/functions.js"></script>
 </head>
-<body onload="horayfecha()">
-    <img src="img/imag3.png" alt="Logotipo Superior Izquierdo" class="logo logo-top-left">
-    <img src="img/imag3.png" alt="Logotipo Superior Derecho" class="logo logo-top-right">
-    <img src="img/imag3.png" alt="Logotipo Inferior Derecho" class="logo logo-bottom-right">
+<body onload="horayfecha()" class="contenido">
+    <a class="log-btn">
+        <img src="img/log-in-icon.png" class="log-icon">
+        <p>Iniciar sesión</p>
+    </a>
+    
     <div class="flex">
-        <div class="content">
-            <h2>Sistema para el control de asistencia de la universidad Unikino</h2>
+        <img src="img/logo-sonora.png" class="logo-sonora">
+        <div class="hora"id="Hora"></div>
+        <div class="fecha" id="Fecha"></div>
+        
+    
+    <div class="user-code">
+        <div>
+            <img src="img/user-icon.png" class="user-icon">
+            
         </div>
-        <img src="img/imagperfil.png" alt="Logotipo Central" class="logo-center" id="imgPerfil" style="position: relative; top: 60px; max-width: 300px; max-height: 300px;">
+        <div class="Scann">
+            <img src="img/barcode-scan.gif" class="escaner">
+        </div>
     </div>
-    <div class="tarjeta">
-        <h1 id="header">Escanee su tarjeta</h1>
+    <p id="header" class="info">Ingresa tu número de empleado</p>
     </div>
-    <div class="Scann">
-        <img src="img/barcode-scan.gif">
+    <div>
+        <img src="img/footer.png" class="footer">
     </div>
-    <div class="hora">
-        <h1 id="Hora"></h1>
-    </div>
+    
     
 </body>
 </html>
