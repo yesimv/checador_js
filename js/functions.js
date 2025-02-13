@@ -81,3 +81,18 @@ function buscarEmpleado(id_empleado) {
 
 //Mantener la setInterval al final del archivo.
 setInterval(horayfecha, 1000);
+
+document.getElementById('logBtn').addEventListener('click', function() {
+    document.getElementById('sidebar').classList.add('active');
+    document.getElementById('overlay').classList.add('active');
+});
+
+document.getElementById('closeBtn').addEventListener('click', function() {
+    document.getElementById('sidebar').classList.remove('active');
+    document.getElementById('overlay').classList.remove('active');
+});
+
+document.getElementById('overlay').addEventListener('click', function() {
+    document.getElementById('sidebar').classList.remove('active');
+    document.getElementById('overlay').classList.remove('active');
+});

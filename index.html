@@ -4,39 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checador</title>
-
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/functions.js"></script>
+    <script src="js/functions.js" defer></script>
 </head>
 <body onload="horayfecha()" class="contenido">
     <div>
-    <a class="log-btn">
-        <img src="img/log-in-icon.png" class="log-icon">
-        <p>Iniciar sesión</p>
-    </a>
-    <div class="logo"><img src="img/logo-sonora.png" class="logo-sonora"></div>
-</div>
+        <a class="log-btn" id="logBtn">
+            <img src="img/log-in-icon.png" class="log-icon">
+            <p>Iniciar sesión</p>
+        </a>
+        <div class="logo"><img src="img/logo-sonora.png" class="logo-sonora"></div>
+    </div>
     <div class="flex">
-        
-        <div class="hora"id="Hora"></div>
+        <div class="hora" id="Hora"></div>
         <div class="fecha" id="Fecha"></div>
+        <div class="user-code">
+            <div>
+                <img src="img/user-icon.png" class="user-icon">
+            </div>
+            <div class="Scann">
+                <img src="img/barcode-scan.gif" class="escaner">
+            </div>
+        </div>
+        <p id="header" class="info">Ingresa tu número de empleado</p>
+    </div>
+    <div class="footer">
+        <img src="img/footer.png" class="footer-img">
+    </div>
+    
+    <div class="overlay" id="overlay"></div>
+
+    <div class="sidebar" id="sidebar">
+
+        <img src="img/close-box-outline.png" class="close-btn" id="closeBtn">
+        <div class="log-in-form">
+            <img src="img/oficialia-mayor-logo.png" class="logo-img" >
+            <p class="log-h">Entrar como administrador</p>
+            <form class="form-input">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password" class="log-psw">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit" class="log-in-btn">INGRESAR</button>
+            </form>
+        </div>
         
-    
-    <div class="user-code">
-        <div>
-            <img src="img/user-icon.png" class="user-icon">
-            
-        </div>
-        <div class="Scann">
-            <img src="img/barcode-scan.gif" class="escaner">
-        </div>
     </div>
-    <p id="header" class="info">Ingresa tu número de empleado</p>
-    </div>
-    <div>
-        <img src="img/footer.png" class="footer">
-    </div>
-    
-    
 </body>
 </html>
